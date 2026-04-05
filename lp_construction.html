@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>建設業の資金繰り、誰かに相談できていますか？ | C-suite＆Co.</title>
+<meta property="og:title" content="来月の支払い、払えますか？｜建設業の資金調達支援">
+<meta property="og:description" content="黒字なのに資金がない。建設業特有の資金繰り課題を、公認会計士・税理士が60分で整理します。無料診断受付中。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f1f3d;
+    --navy-mid: #1a3460;
+    --navy-light: #2a4a7f;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --cream: #f8f5ef;
+    --text: #1a1a1a;
+    --text-muted: #666;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: var(--navy);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 80px 24px;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.015) 0px,
+      rgba(255,255,255,0.015) 1px,
+      transparent 1px,
+      transparent 80px
+    );
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0; right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom right, var(--navy) 49%, var(--cream) 50%);
+  }
+
+  .hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .hero-catch {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(36px, 8vw, 64px);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-catch span {
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: clamp(16px, 3vw, 20px);
+    color: rgba(255,255,255,0.65);
+    font-weight: 300;
+    margin-bottom: 56px;
+    line-height: 1.7;
+  }
+
+  .hero-flow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 56px;
+  }
+
+  .hero-flow-item {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 300;
+  }
+
+  .hero-flow-arrow {
+    color: var(--gold);
+    font-size: 14px;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 20px 48px;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    position: relative;
+    transition: all 0.3s;
+  }
+
+  .hero-cta::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; right: -4px;
+    width: 100%; height: 100%;
+    border: 1px solid var(--gold-light);
+    transition: all 0.3s;
+  }
+
+  .hero-cta:hover {
+    background: var(--gold-light);
+    transform: translate(-2px, -2px);
+  }
+
+  .hero-cta:hover::after {
+    bottom: -6px; right: -6px;
+  }
+
+  .hero-note {
+    margin-top: 16px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+  }
+
+  /* ===== SECTION BASE ===== */
+  section {
+    padding: 100px 24px;
+  }
+
+  .section-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(24px, 5vw, 36px);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.4;
+    margin-bottom: 48px;
+  }
+
+  /* ===== PAIN ===== */
+  .pain {
+    background: var(--white);
+  }
+
+  .pain-grid {
+    display: grid;
+    gap: 1px;
+    background: #e0ddd6;
+    border: 1px solid #e0ddd6;
+    margin-bottom: 48px;
+  }
+
+  .pain-item {
+    background: var(--white);
+    padding: 28px 32px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: background 0.2s;
+  }
+
+  .pain-item:hover {
+    background: #faf9f6;
+  }
+
+  .pain-num {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: #e0ddd6;
+    line-height: 1;
+    min-width: 32px;
+    margin-top: 4px;
+  }
+
+  .pain-text {
+    font-size: 15px;
+    color: var(--text);
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  .pain-text strong {
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .pain-conclusion {
+    background: var(--navy);
+    padding: 32px 36px;
+    border-left: 4px solid var(--gold);
+  }
+
+  .pain-conclusion p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    color: var(--white);
+    line-height: 1.7;
+    font-weight: 400;
+  }
+
+  .pain-conclusion strong {
+    color: var(--gold);
+  }
+
+  /* ===== STRUCTURE ===== */
+  .structure {
+    background: var(--cream);
+  }
+
+  .structure-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 48px;
+  }
+
+  .structure-step {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .structure-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 40px;
+  }
+
+  .structure-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  .structure-connector {
+    width: 1px;
+    flex: 1;
+    background: linear-gradient(to bottom, var(--gold), rgba(201,168,76,0.2));
+    min-height: 48px;
+  }
+
+  .structure-content {
+    padding-bottom: 40px;
+    flex: 1;
+  }
+
+  .structure-content-label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .structure-content-text {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  .structure-content-text strong {
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--navy);
+  }
+
+  /* ===== SERVICE ===== */
+  .service {
+    background: var(--navy);
+  }
+
+  .service .section-title {
+    color: var(--white);
+  }
+
+  .service-cards {
+    display: grid;
+    gap: 2px;
+    margin-bottom: 48px;
+  }
+
+  .service-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 36px 40px;
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    transition: background 0.3s;
+  }
+
+  .service-card:hover {
+    background: rgba(255,255,255,0.08);
+  }
+
+  .service-card-num {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(201,168,76,0.25);
+    line-height: 1;
+    min-width: 48px;
+  }
+
+  .service-card-body h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .service-card-body p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.8;
+  }
+
+  /* ===== PROFILE ===== */
+  .profile {
+    background: var(--white);
+  }
+
+  .profile-box {
+    border-left: 4px solid var(--gold);
+    padding-left: 32px;
+    margin-bottom: 48px;
+  }
+
+  .profile-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+
+  .profile-text {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.9;
+    margin-bottom: 12px;
+  }
+
+  .profile-stat {
+    display: flex;
+    gap: 40px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  .profile-stat-item {
+    text-align: center;
+  }
+
+  .profile-stat-num {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .profile-stat-num span {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .profile-stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+  }
+
+  /* ===== CTA SECTION ===== */
+  .cta-section {
+    background: var(--cream);
+    text-align: center;
+  }
+
+  .cta-box {
+    background: var(--white);
+    border: 1px solid #e0ddd6;
+    padding: 64px 48px;
+    position: relative;
+  }
+
+  .cta-box::before {
+    content: '';
+    position: absolute;
+    top: 8px; left: 8px;
+    right: -8px; bottom: -8px;
+    border: 1px solid var(--gold);
+    z-index: -1;
+  }
+
+  .cta-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 900;
+    color: var(--navy);
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+
+  .cta-sub {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    line-height: 1.8;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 22px 56px;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    position: relative;
+    transition: all 0.3s;
+    margin-bottom: 16px;
+  }
+
+  .cta-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; right: -4px;
+    width: 100%; height: 100%;
+    border: 1px solid var(--navy-light);
+    transition: all 0.3s;
+  }
+
+  .cta-btn:hover {
+    background: var(--navy-mid);
+    transform: translate(-2px, -2px);
+  }
+
+  .cta-btn:hover::after {
+    bottom: -6px; right: -6px;
+  }
+
+  .cta-note {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 8px;
+    line-height: 1.8;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--navy);
+    padding: 48px 24px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .footer-sub {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.1em;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow { animation: fadeUp 0.6s ease both; }
+  .hero-catch { animation: fadeUp 0.6s 0.15s ease both; }
+  .hero-sub { animation: fadeUp 0.6s 0.3s ease both; }
+  .hero-flow { animation: fadeUp 0.6s 0.4s ease both; }
+  .hero-cta { animation: fadeUp 0.6s 0.5s ease both; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 600px) {
+    section { padding: 72px 20px; }
+    .pain-item { padding: 20px 20px; }
+    .service-card { padding: 28px 24px; }
+    .cta-box { padding: 40px 28px; }
+    .cta-box::before { display: none; }
+    .profile-stat { gap: 24px; }
+    .hero-flow-item { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">練馬区・板橋区の建設業経営者の方へ</p>
+    <h1 class="hero-catch">来月の支払い、<br><span>払えますか？</span></h1>
+    <p class="hero-sub">
+      黒字なのに、口座残高だけが足りない。<br>
+      建設業特有のこの違和感、放置すると危険です。
+    </p>
+    <div class="hero-flow">
+      <span class="hero-flow-item">外注費・材料費が先に出る</span>
+      <span class="hero-flow-arrow">→</span>
+      <span class="hero-flow-item">入金は工事後</span>
+      <span class="hero-flow-arrow">→</span>
+      <span class="hero-flow-item">通帳残高だけ減る</span>
+    </div>
+    <a href="https://forms.gle/TxqjQfxCjroETNwk9" class="hero-cta" target="_blank">
+      60分・無料診断を申し込む
+    </a>
+    <p class="hero-note">※ しつこい営業は行いません　※ まず現状確認のみでも大丈夫です</p>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="pain">
+  <div class="section-inner">
+    <p class="section-label">こんな状態、ありませんか</p>
+    <h2 class="section-title">売上があるのに、<br>なぜこんなに苦しいのか</h2>
+
+    <div class="pain-grid">
+      <div class="pain-item">
+        <div class="pain-num">01</div>
+        <div class="pain-text"><strong>売上は伸びているのに、月末が怖い。</strong><br>受注が増えたのに、むしろ資金繰りは苦しくなった。</div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-num">02</div>
+        <div class="pain-text"><strong>試算表では黒字。でも現預金は増えない。</strong><br>税理士には過去の数字を見てもらえる。でも来月の資金が足りるかは誰も教えてくれない。</div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-num">03</div>
+        <div class="pain-text"><strong>銀行に相談しても、何を見られているか分からない。</strong><br>評価を上げる打ち手が見えない。</div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-num">04</div>
+        <div class="pain-text"><strong>社内で相談できる相手がいない。</strong><br>結局、社長ひとりで抱えている。夜、ふと頭をよぎる。「来月、払えるのか？」</div>
+      </div>
+    </div>
+
+    <div class="pain-conclusion">
+      <p>本当に危ないのは、赤字の会社ではありません。<br><strong>黒字でも資金が詰まる会社</strong>です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- STRUCTURE -->
+<section class="structure">
+  <div class="section-inner">
+    <p class="section-label">建設業の資金構造</p>
+    <h2 class="section-title">なぜ建設業だけが<br>この問題に直面するのか</h2>
+
+    <div class="structure-flow">
+      <div class="structure-step">
+        <div class="structure-line">
+          <div class="structure-dot"></div>
+          <div class="structure-connector"></div>
+        </div>
+        <div class="structure-content">
+          <div class="structure-content-label">Step 01</div>
+          <div class="structure-content-text"><strong>受注が増える</strong><br>案件はある。現場も回っている。数字の上では順調。</div>
+        </div>
+      </div>
+      <div class="structure-step">
+        <div class="structure-line">
+          <div class="structure-dot"></div>
+          <div class="structure-connector"></div>
+        </div>
+        <div class="structure-content">
+          <div class="structure-content-label">Step 02</div>
+          <div class="structure-content-text"><strong>先に外注費・材料費・労務費が出る</strong><br>支払いは先行構造。これは建設業の宿命。</div>
+        </div>
+      </div>
+      <div class="structure-step">
+        <div class="structure-line">
+          <div class="structure-dot"></div>
+          <div class="structure-connector"></div>
+        </div>
+        <div class="structure-content">
+          <div class="structure-content-label">Step 03</div>
+          <div class="structure-content-text"><strong>請求・入金は工事完成後。留保金も残る</strong><br>工期が長いほど、資金の固定期間は延びる。</div>
+        </div>
+      </div>
+      <div class="structure-step">
+        <div class="structure-line">
+          <div class="structure-dot"></div>
+          <div class="structure-connector" style="background: none;"></div>
+        </div>
+        <div class="structure-content">
+          <div class="structure-content-label">Result</div>
+          <div class="structure-content-text"><strong>通帳残高だけが減り続ける</strong><br>気づいたときには、資金ショートに近づいている。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pain-conclusion">
+      <p>この分断——現場・資金・銀行がバラバラのまま放置されることが、<strong>建設業の資金繰りを苦しくする根本原因</strong>です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE -->
+<section class="service">
+  <div class="section-inner">
+    <p class="section-label" style="color: var(--gold);">60分の無料診断</p>
+    <h2 class="section-title">ここまで見えます</h2>
+
+    <div class="service-cards">
+      <div class="service-card">
+        <div class="service-card-num">01</div>
+        <div class="service-card-body">
+          <h3>資金ショート予測</h3>
+          <p>いつ資金が尽きるかを、事前に見える化します。「なんとなく不安」を数字に変換し、手を打てるタイミングを明確にします。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-num">02</div>
+        <div class="service-card-body">
+          <h3>銀行評価の改善</h3>
+          <p>今どう見られているかを整理し、評価を上げる打ち手を明確にします。銀行との交渉を有利に進めるための準備を一緒に行います。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFILE -->
+<section class="profile">
+  <div class="section-inner">
+    <p class="section-label">支援者について</p>
+    <h2 class="section-title">なぜ、私がこの話を<br>できるのか</h2>
+
+    <div class="profile-box">
+      <p class="profile-title">公認会計士・税理士<br>建設業資金調達支援専門家</p>
+      <p class="profile-text">
+        私は、ひとつの立場だけで資金繰りを見てきたわけではありません。大企業の監査で財務の構造を見てきました。スタートアップでは資金の現実を当事者として経験しました。そして中小企業の現場にも、経営チームとして関わってきました。
+      </p>
+      <p class="profile-text">
+        規模が違っても、資金繰りで詰まる構造は同じです。だから分かります。これは理論ではなく、現場の話です。
+      </p>
+      <div class="profile-stat">
+        <div class="profile-stat-item">
+          <div class="profile-stat-num">5<span>億円</span></div>
+          <div class="profile-stat-label">資金調達支援実績（直近1年間）</div>
+        </div>
+        <div class="profile-stat-item">
+          <div class="profile-stat-num">60<span>分</span></div>
+          <div class="profile-stat-label">初回診断・完全無料</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="section-inner">
+    <div class="cta-box">
+      <h2 class="cta-title">「まだ回っているうち」に<br>一度、整理してください</h2>
+      <p class="cta-sub">
+        60分で、資金が尽きるタイミング・銀行評価・改善の優先順位まで明確にします。<br>
+        このまま進むか、一度立て直すか。判断するための材料は、ここで揃います。
+      </p>
+      <a href="https://forms.gle/TxqjQfxCjroETNwk9" class="cta-btn" target="_blank">
+        無料診断を申し込む（60分）
+      </a>
+      <p class="cta-note">
+        ※ Googleフォームに移動します　※ 入力は1〜2分で完了<br>
+        ※ まずは現状確認のみでも大丈夫です　※ しつこい営業は行いません
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-logo">株式会社C-suite＆Co.</p>
+  <p class="footer-sub">公認会計士・税理士 ／ 建設業資金調達支援専門家</p>
+</footer>
+
+</body>
+</html>
